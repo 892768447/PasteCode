@@ -9,7 +9,7 @@ Make a website with PHP to share codes and store data into sqlite3.
 
 ## Todo
 - [x] search.
-- [] use vue.
+- [ ] use vue.
 
 ## ScreenShot
 ![add_content](ScreenShot/add_content.png)
