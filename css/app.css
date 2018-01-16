@@ -1,0 +1,105 @@
+.material-icons,
+.item-panel {
+    cursor: pointer;
+}
+
+.tabs {
+    overflow-x: hidden;
+    overflow-y: hidden;
+}
+
+.pagination li.active {
+    background-color: #009688 !important;
+}
+
+.nav-content {
+    margin-top: 72px;
+}
+
+
+/* search expandable*/
+
+nav .nav-wrapper.with-search-expandable .input-field.search-expandable {
+    width: auto;
+    display: inline-block;
+    float: right;
+    z-index: 2;
+}
+
+nav .nav-wrapper.with-search-expandable .input-field.search-expandable input[type=search]:focus~.close-button {
+    font-size: 24px;
+}
+
+nav .nav-wrapper.with-search-expandable .input-field.search-expandable input[type=search]~.close-button {
+    font-size: 0;
+}
+
+nav .nav-wrapper.with-search-expandable .input-field.search-expandable,
+nav .nav-wrapper.with-search-expandable .input-field.search-expandable * {
+    transition: all .3s !important;
+}
+
+nav .nav-wrapper.with-search-expandable .input-field.search-expandable .label-icon {
+    width: 42px;
+    top: 0 !important;
+    margin-top: -12px;
+    padding: 0px;
+    line-height: 64px;
+    left: auto !important;
+    right: 0;
+}
+
+nav .nav-wrapper.with-search-expandable .input-field.search-expandable input[type=search]:not(:focus)+label i {
+    color: white;
+    cursor: pointer;
+}
+
+nav .nav-wrapper.with-search-expandable .input-field.search-expandable input[type=search] {
+    width: 0px !important;
+    float: right;
+}
+
+nav .nav-wrapper.with-search-expandable .input-field.search-expandable input[type=search]:focus {
+    width: calc(100% - 4rem) !important;
+}
+
+nav .nav-wrapper.with-search-expandable .input-field.search-expandable input[type=search]:focus+label {
+    right: calc(100% - 58px) !important
+}
+
+nav .nav-wrapper.with-search-expandable {
+    position: relative;
+}
+
+nav .nav-wrapper.with-search-expandable .nav-menu {
+    position: absolute;
+    padding-left: 64px;
+    max-height: 100%;
+    padding-right: 120px;
+    overflow: hidden;
+}
+
+nav .nav-wrapper.with-search-expandable .button-collapse {
+    position: absolute
+}
+
+nav .nav-wrapper.with-search-expandable .nav-search-form {
+    height: 64px;
+}
+
+nav .nav-wrapper.with-search-expandable .nav-menu {
+    padding-left: 64px;
+}
+
+@media screen and (max-width: 600px) {
+    nav .nav-wrapper.with-search-expandable .nav-menu {
+        padding-left: 56px;
+    }
+    nav .nav-wrapper.with-search-expandable .nav-search-form {
+        height: 56px;
+    }
+}
+
+.navbar-fixed {
+    z-index: 998;
+}

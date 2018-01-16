@@ -11,34 +11,22 @@
         <link rel="stylesheet" href="./css/materializecss-font.css">
         <link rel="stylesheet" media="screen,projection" href="./css/materialize.min.css">
         <link rel="stylesheet" href="./css/vs.css" />
-        <style>
-            .material-icons,
-            .item-panel {
-                cursor: pointer;
-            }
-            
-            .tabs {
-                overflow-x: hidden;
-                overflow-y: hidden;
-            }
-            
-            .pagination li.active {
-                background-color: #009688 !important;
-            }
-            
-            .progress {
-                margin-top: 68px;
-            }
-        </style>
+        <link rel="stylesheet" href="./css/app.css" />
         <title>Paste Code</title>
     </head>
 
     <body>
-        <header class="navbar-fixed">
+        <div class="navbar-fixed">
             <nav class="nav-extended teal">
-                <div class="nav-wrapper">
-                    <a href="/" class="brand-logo">
-                        <i class="material-icons">code</i>Paste Code</a>
+                <div class="nav-wrapper with-search-expandable">
+                    <a href="/" class="brand-logo"><i class="material-icons">code</i>Paste Code</a>
+                    <form id="search_form" class="nav-search-form right">
+                        <div class="input-field search-expandable">
+                            <input id="word" name="word" type="search" required />
+                            <label class="label-icon" for="search"><i class="material-icons">search</i></label>
+                            <i class="material-icons close-button">close</i>
+                        </div>
+                    </form>
                 </div>
                 <div class="row">
                     <div class="col s12 no-padding">
@@ -56,21 +44,21 @@
                     </div>
                 </div>
             </nav>
-        </header>
-        <div class="progress">
-            <div class="indeterminate"></div>
         </div>
+        <!--<div class="progress">
+            <div class="indeterminate"></div>
+        </div>-->
         <div class="nav-content">
             <div id="add_content" class="col s12">
                 <div class="row">
-                    <form class="col s12" method="post" action="#">
+                    <form id="new_form" class="col s12" method="post" action="#">
                         <div class="row">
                             <div class="input-field col s6">
-                                <input id="title" name="title" type="text" class="validate" length="10">
+                                <input id="title" name="title" type="text" class="validate" length="10" required>
                                 <label for="title" data-error="请填写标题" data-success="正确">标题</label>
                             </div>
                             <div class="input-field col s6">
-                                <input id="user" name="user" type="text" class="validate" length="10">
+                                <input id="user" name="user" type="text" class="validate" length="10" required>
                                 <label for="user" data-error="请填写昵称" data-success="正确">昵称</label>
                             </div>
                         </div>

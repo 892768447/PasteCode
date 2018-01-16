@@ -28,9 +28,14 @@ function get_content_by_id($id) {
     return R::findOne('contents', ' id = ? ', [$id]);
 }
 
+//like查询
+function get_content_by_word($word) {
+    return R::getAll('select id, title, user, language, substr(content, 0, 100) content, time from contents where title like ? or content like ? order by contents.time desc;', ['%'.$word.'%', '%'.$word.'%']);
+}
+
 //分页获取数据
 function get_contents($offset, $limit=20) {
-    return R::getAll('select id, title, user, language, substr(content, 0, 20) content, time from contents order by contents.time desc limit ? offset ?;', [$limit, $offset * $limit]);
+    return R::getAll('select id, title, user, language, substr(content, 0, 100) content, time from contents order by contents.time desc limit ? offset ?;', [$limit, $offset * $limit]);
     //return R::findAll('contents', 'order by contents.time desc limit ? offset ?', [$limit, $offset * $limit]);
 }
 

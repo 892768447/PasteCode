@@ -52,6 +52,12 @@
         $result['data'] = get_content_by_id($_POST['id']);
         echo json_encode($result);
         exit();
+    } elseif($_POST['type'] == 'search') {
+        $result['code'] = 1;
+        $result['msg'] = '查询成功';
+        $result['data'] = json_encode(array_chunk(get_content_by_word($_POST['word']), 4));
+        echo json_encode($result);
+        exit();
     } else {
         //分页获取列表
         $offset = $_POST['offset'];
