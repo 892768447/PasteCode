@@ -144,6 +144,7 @@ function init_pagination() {
             if(lastPage === 0) {
                 return;
             }
+            $('#view_pagination').html('');
             $('#view_pagination').materializePagination({
                 align: 'center',
                 lastPage: data.data % 20 == 0 ? lastPage : lastPage + 1,
