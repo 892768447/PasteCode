@@ -1,24 +1,7 @@
-//获取最近记录
-function get_recent() {
-    $.ajax({
-        url: 'http://codepad.org/recent',
-        type: 'get',
-        async: true,
-        dataType: 'html',
-        success: function(data, status) {
-            console.log(data);
-        },
-        error: function(xhr, status, err) {
-            $('#view_notice_msg').html(status);
-            $('#view_notice').modal('open');
-        }
-    });
-}
-
 $(document).ready(function() {
     $('select').material_select();
     $('#view_notice').modal();
-    get_recent();
+    /*
     $('#search_form').submit(function(e) {
         var word = $('#word').val().trim();
         if (word !== '') {
@@ -26,6 +9,7 @@ $(document).ready(function() {
         }
         return false;
     });
+    */
     $('#new_form').submit(function(e) {
         //判断标题
         var title = $('#title').val().trim();
