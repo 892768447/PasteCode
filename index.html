@@ -6,153 +6,123 @@
         <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no">
         <meta name="author" content="Irony">
         <meta name="repo" content="https://github.com/892768447/PasteCode">
-        <meta name="description" content="Paste your code">
-        <link rel="shortcut icon" href="./favicon.ico">
-        <link rel="stylesheet" href="./css/materializecss-font.css">
-        <link rel="stylesheet" media="screen,projection" href="./css/materialize.min.css">
-        <link rel="stylesheet" href="./css/vs.css" />
-        <link rel="stylesheet" href="./css/app.css" />
-        <title>Paste Code</title>
-    </head>
+        <meta name="description" content="Paste Your Code And Share">
+        <link rel="shortcut icon" href="favicon.ico">
+        <link rel="stylesheet" href="//fonts.cat.net/css?family=Roboto:300,400,500,700,400italic|Material+Icons">
+        <link rel="stylesheet" media="screen,projection" href="css/materialize.min.css">
+        <link rel="stylesheet" href="css/app.css" />
+        <title>Paste Code</title></head>
 
     <body>
-        <div class="navbar-fixed">
-            <nav class="nav-extended teal">
+        <header class="navbar-fixed">
+            <div class="progress">
+                <div class="indeterminate"></div>
+            </div>
+            <nav class="nav-wrappe teal">
                 <div class="nav-wrapper with-search-expandable">
-                    <a href="/" class="brand-logo"><i class="material-icons">code</i>Paste Code</a>
+                    <a href="/" class="brand-logo">
+                        <i class="material-icons">code</i>Paste Code</a>
+                    <a href="#" class="right">
+                        <i class="material-icons">perm_identity</i>&nbsp;</a>
                     <form id="search_form" class="nav-search-form right">
                         <div class="input-field search-expandable">
-                            <input id="word" name="word" type="search" required />
-                            <label class="label-icon" for="search"><i class="material-icons">search</i></label>
-                            <i class="material-icons close-button">close</i>
-                        </div>
+                            <input id="word" name="word" type="search" autocomplete="off" disableautocomplete required />
+                            <label class="label-icon" for="search">
+                                <i class="material-icons">search</i></label>
+                            <i class="material-icons close-button">close</i></div>
                     </form>
-                </div>
-                <div class="row">
-                    <div class="col s12 no-padding">
-                        <ul class="tabs tabs-transparent tabs-fixed-width">
-                            <li class="tab">
-                                <a href="#add_content">新增内容</a>
-                            </li>
-                            <li class="tab">
-                                <a class="active" href="#view_history">历史记录</a>
-                            </li>
-                            <li class="tab">
-                                <a href="#view_detail">内容详情</a>
-                            </li>
-                        </ul>
-                    </div>
                 </div>
             </nav>
-        </div>
-        <!--<div class="progress">
-            <div class="indeterminate"></div>
-        </div>-->
-        <div class="nav-content">
-            <div id="add_content" class="col s12">
-                <div class="row">
-                    <form id="new_form" class="col s12" method="post" action="#">
-                        <div class="row">
-                            <div class="input-field col s6">
-                                <input id="title" name="title" type="text" class="validate" length="10" required>
-                                <label for="title" data-error="请填写标题" data-success="正确">标题</label>
+        </header>
+        <main>
+            <div class="nav-content">
+                <div id="add_content" class="col s12">
+                    <div class="row">
+                        <form id="new_form" class="col s12" method="post" action="#">
+                            <div class="row">
+                                <div class="input-field col s6">
+                                    <input id="title" name="title" type="text" class="validate" length="10" required>
+                                    <label for="title" data-error="请填写标题" data-success="正确">标题</label></div>
+                                <div class="input-field col s6">
+                                    <input id="user" name="user" type="text" class="validate" length="10" required>
+                                    <label for="user" data-error="请填写昵称" data-success="正确">昵称</label></div>
                             </div>
-                            <div class="input-field col s6">
-                                <input id="user" name="user" type="text" class="validate" length="10" required>
-                                <label for="user" data-error="请填写昵称" data-success="正确">昵称</label>
+                            <div class="row">
+                                <div class="input-field col s12">
+                                    <select id="language" name="language">
+                                        <option value="nohighlight" selected>None</option>
+                                        <option value="bash">Bash</option>
+                                        <option value="css">CSS</option>
+                                        <option value="json">JSON</option>
+                                        <option value="java">Java</option>
+                                        <option value="php">PHP</option>
+                                        <option value="python">Python</option>
+                                        <option value="sql">SQL</option></select>
+                                    <label>类型</label></div>
                             </div>
-                        </div>
-                        <div class="row">
-                            <div class="input-field col s12">
-                                <select id="language" name="language">
-                                    <option value="nohighlight" selected>None</option>
-                                    <option value="bash">Bash</option>
-                                    <option value="css">CSS</option>
-                                    <option value="json">JSON</option>
-                                    <option value="java">Java</option>
-                                    <option value="php">PHP</option>
-                                    <option value="python">Python</option>
-                                    <option value="sql">SQL</option>
-                                </select>
-                                <label>类型</label>
+                            <div class="row">
+                                <div class="input-field col s12">
+                                    <textarea id="content" name="content" class="materialize-textarea validate"></textarea>
+                                    <label for="content" data-error="请填写内容" data-success="正确">文本域</label></div>
                             </div>
-                        </div>
-                        <div class="row">
-                            <div class="input-field col s12">
-                                <textarea id="content" name="content" class="materialize-textarea validate"></textarea>
-                                <label for="content" data-error="请填写内容" data-success="正确">文本域</label>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="input-field col s12">
-                                <div class="col s6 center">
-                                    <button class="btn waves-effect waves-light" type="reset" name="action">重置
-                                    <i class="material-icons right">replay</i>
-                                </button>
-                                </div>
-                                <div class="col s6 center">
-                                    <button class="btn waves-effect waves-light" type="submit" name="action">提交
-                                    <i class="material-icons right">send</i>
-                                </button>
+                            <div class="row">
+                                <div class="input-field col s12">
+                                    <div class="col s6 center">
+                                        <button class="btn waves-effect waves-light" type="reset" name="action">重置
+                                            <i class="material-icons right">replay</i></button>
+                                    </div>
+                                    <div class="col s6 center">
+                                        <button class="btn waves-effect waves-light" type="submit" name="action">提交
+                                            <i class="material-icons right">send</i></button>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                    </form>
+                        </form>
+                    </div>
+                </div>
+                <div id="view_history" class="col s12">
+                    <div id="view_history_content"></div>
+                    <div id="view_pagination" class="center pin-bottom"></div>
+                </div>
+                <div id="view_detail" class="col s12">
+                    <pre>
+                        <code id="view_code_detail" class=""></code>
+                    </pre>
                 </div>
             </div>
-            <div id="view_history" class="col s12">
-                <div id="view_history_content"></div>
-                <script id="tpl_history_content" type="text/html">
-                    {{each rows items rindex}}
-                    <div class="row">
-                        {{each items item iindex}}
-                        <div class="item-panel col s12 m6 l3" data-id="{{item.id}}">
-                            <div class="card hoverable">
-                                <div class="card-content black-text">
-                                    <span class="card-title">{{item.title}}</span>
-                                    <p class="item-content truncate">{{item.content}}</p>
-                                </div>
-                                <div class="card-action">
-                                    <a href="javascript:;" class="teal-text">{{item.language}}</a>
-                                    <a href="javascript:;" class="right teal-text">{{item.time}}</a>
-                                </div>
-                            </div>
-                        </div>
-                        {{/each}}
-                    </div>
-                    {{/each}}
-                </script>
-                <div id="view_pagination" class="center pin-bottom"></div>
+            <div id="view_notice" class="modal">
+                <div class="modal-content">
+                    <h4>提示</h4>
+                    <p id="view_notice_msg"></p>
+                </div>
+                <div class="modal-footer">
+                    <a href="javascript:;" class=" modal-action modal-close waves-effect waves-green btn-flat">知道了</a></div>
             </div>
-            <div id="view_detail" class="col s12">
-                <pre><code id="view_code_detail" class=""></code></pre>
+            <div class="fixed-action-btn" style="bottom: 45px; right: 24px;">
+                <a class="btn-floating btn-large teal" href="javascript:scroll(0,0);">
+                    <i class="material-icons">navigation</i></a>
             </div>
-        </div>
-        <!-- Modal Structure -->
-        <div id="view_notice" class="modal">
-            <div class="modal-content">
-                <h4>提示</h4>
-                <p id="view_notice_msg"></p>
+        </main>
+        <footer class="page-footer teal">
+            <div class="nav-wrapper">
+                <ul class="tabs tabs-transparent tabs-fixed-width">
+                    <li class="tab">
+                        <a href="#add_content">新增内容</a></li>
+                    <li class="tab">
+                        <a class="active" href="#view_history">历史记录</a></li>
+                    <li class="tab">
+                        <a href="#view_detail">内容详情</a></li>
+                </ul>
             </div>
-            <div class="modal-footer">
-                <a href="javascript:;" class=" modal-action modal-close waves-effect waves-green btn-flat">知道了</a>
-            </div>
-        </div>
-        <div class="fixed-action-btn" style="bottom: 45px; right: 24px;">
-            <a class="btn-floating btn-large teal" href="javascript:scroll(0,0);">
-                <i class="material-icons">navigation</i>
-            </a>
-        </div>
+        </footer>
         <!-- Scripts-->
-        <script type="text/javascript" src="./js/jquery.min.js"></script>
-        <script type="text/javascript" src="./js/template-web.js"></script>
-        <script type="text/javascript" src="./js/materialize.min.js"></script>
-        <script type="text/javascript" src="./js/materialize-pagination.js"></script>
-        <script type="text/javascript" src="./js/json2.js"></script>
-        <script type="text/javascript" src="./js/highlight.min.js"></script>
-        <script type="text/javascript" src="./js/canvas-nest.min.js" color="0,150,136" opacity="0.5" count="60" id="nest"></script>
-        <script async type="text/javascript" src="./js/love.js"></script>
-        <script type="text/javascript" src="./js/app.js"></script>
+        <script src="//unpkg.com/jquery"></script>
+        <script src="//unpkg.com/vue"></script>
+        <script type="text/javascript" src="js/materialize.min.js"></script>
+        <script type="text/javascript" src="js/materialize-pagination.js"></script>
+        <script type="text/javascript" src="js/canvas-nest.min.js" color="0,150,136" opacity="0.5" count="60" id="nest"></script>
+        <script async type="text/javascript" src="js/love.js"></script>
+        <script type="text/javascript" src="js/app.js"></script>
     </body>
 
 </html>
