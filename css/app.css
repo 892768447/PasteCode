@@ -5,8 +5,16 @@
     overflow-x:hidden;
     overflow-y:hidden;
 }
+.fade-enter-active, .fade-leave-active {
+  transition: opacity .5s
+}
+.fade-enter, .fade-leave-to /* .fade-leave-active in below version 2.1.8 */ {
+  opacity: 0
+}
 .progress {
     margin:0 0 0 0;
+    position: fixed;
+    z-index: 100;
 }
 .page-footer {
     position:fixed;
