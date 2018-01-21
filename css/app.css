@@ -1,111 +1,142 @@
-.material-icons,.item-panel {
-    cursor:pointer;
+.material-icons,
+.item-panel {
+  cursor: pointer;
 }
 .tabs {
-    overflow-x:hidden;
-    overflow-y:hidden;
+  overflow-x: hidden;
+  overflow-y: hidden;
 }
-.fade-enter-active, .fade-leave-active {
-  transition: opacity .5s
-}
-.fade-enter, .fade-leave-to /* .fade-leave-active in below version 2.1.8 */ {
-  opacity: 0
+pre {
+  white-space: pre-wrap;
+  overflow: hidden;
+  margin-left: 24px;
 }
 .progress {
-    margin:0 0 0 0;
-    position: fixed;
-    z-index: 100;
+  margin: 0 0 0 0;
+  position: fixed;
+  z-index: 100;
 }
 .page-footer {
-    position:fixed;
-    width:100%;
-    bottom:0px;
-    z-index:100;
+  position: fixed;
+  width: 100%;
+  bottom: 0px;
+  z-index: 100;
 }
 .pagination li.active {
-    background-color:#009688 !important;
+  background-color: #009688 !important;
 }
 .nav-content {
-    margin-top:72px;
-    margin-bottom:72px
+  margin-top: 72px;
+  margin-bottom: 72px;
 }
 /* search expandable*/
 
 nav .nav-wrapper.with-search-expandable .input-field.search-expandable {
-    width:auto;
-    display:inline-block;
-    float:right;
-    z-index:2;
+  width: auto;
+  display: inline-block;
+  float: right;
+  z-index: 2;
 }
-nav .nav-wrapper.with-search-expandable .input-field.search-expandable input[type=search] {
-    color:white;
-    background:transparent;
+nav
+  .nav-wrapper.with-search-expandable
+  .input-field.search-expandable
+  input[type="search"] {
+  color: white;
+  background: transparent;
 }
-nav .nav-wrapper.with-search-expandable .input-field.search-expandable input[type=search]:focus~.close-button {
-    color:white;
-    font-size:24px;
+nav
+  .nav-wrapper.with-search-expandable
+  .input-field.search-expandable
+  input[type="search"]:focus
+  ~ .close-button {
+  color: white;
+  font-size: 24px;
 }
-nav .nav-wrapper.with-search-expandable .input-field.search-expandable input[type=search]~.close-button {
-    font-size:0;
+nav
+  .nav-wrapper.with-search-expandable
+  .input-field.search-expandable
+  input[type="search"]
+  ~ .close-button {
+  font-size: 0;
 }
-nav .nav-wrapper.with-search-expandable .input-field.search-expandable,nav .nav-wrapper.with-search-expandable .input-field.search-expandable * {
-    transition:all .3s !important;
+nav .nav-wrapper.with-search-expandable .input-field.search-expandable,
+nav .nav-wrapper.with-search-expandable .input-field.search-expandable * {
+  transition: all 0.3s !important;
 }
-nav .nav-wrapper.with-search-expandable .input-field.search-expandable .label-icon {
-    width:42px;
-    top:0 !important;
-    margin-top:-12px;
-    padding:0px;
-    line-height:64px;
-    left:auto !important;
-    right:0;
-    color:white;
+nav
+  .nav-wrapper.with-search-expandable
+  .input-field.search-expandable
+  .label-icon {
+  width: 42px;
+  top: 0 !important;
+  margin-top: -12px;
+  padding: 0px;
+  line-height: 64px;
+  left: auto !important;
+  right: 0;
+  color: white;
 }
-nav .nav-wrapper.with-search-expandable .input-field.search-expandable input[type=search]:not(:focus)+label i {
-    color:white;
-    cursor:pointer;
+nav
+  .nav-wrapper.with-search-expandable
+  .input-field.search-expandable
+  input[type="search"]:not(:focus)
+  + label
+  i {
+  color: white;
+  cursor: pointer;
 }
-nav .nav-wrapper.with-search-expandable .input-field.search-expandable input[type=search] {
-    width:0px !important;
-    float:right;
-    cursor:pointer;
+nav
+  .nav-wrapper.with-search-expandable
+  .input-field.search-expandable
+  input[type="search"] {
+  width: 0px !important;
+  float: right;
+  cursor: pointer;
 }
-nav .nav-wrapper.with-search-expandable .input-field.search-expandable input[type=search]:focus {
-    width:calc(100% - 4rem) !important;
-    border-bottom:1px solid #00796b;
-    -webkit-box-shadow:0 1px 0 0 #00796b;
-    box-shadow:0 1px 0 0 #00796b;
-    cursor:text;
+nav
+  .nav-wrapper.with-search-expandable
+  .input-field.search-expandable
+  input[type="search"]:focus {
+  width: calc(100% - 4rem) !important;
+  border-bottom: 1px solid #00796b;
+  -webkit-box-shadow: 0 1px 0 0 #00796b;
+  box-shadow: 0 1px 0 0 #00796b;
+  cursor: text;
 }
-nav .nav-wrapper.with-search-expandable .input-field.search-expandable input[type=search]:focus+label {
-    right:calc(100% - 58px) !important
+nav
+  .nav-wrapper.with-search-expandable
+  .input-field.search-expandable
+  input[type="search"]:focus
+  + label {
+  right: calc(100% - 58px) !important;
 }
 nav .nav-wrapper.with-search-expandable {
-    position:relative;
+  position: relative;
 }
 nav .nav-wrapper.with-search-expandable .nav-menu {
-    position:absolute;
-    padding-left:64px;
-    max-height:100%;
-    padding-right:120px;
-    overflow:hidden;
+  position: absolute;
+  padding-left: 64px;
+  max-height: 100%;
+  padding-right: 120px;
+  overflow: hidden;
 }
 nav .nav-wrapper.with-search-expandable .button-collapse {
-    position:absolute
+  position: absolute;
 }
 nav .nav-wrapper.with-search-expandable .nav-search-form {
-    height:64px;
+  height: 64px;
 }
 nav .nav-wrapper.with-search-expandable .nav-menu {
-    padding-left:64px;
+  padding-left: 64px;
 }
-@media screen and (max-width:600px) {
-    nav .nav-wrapper.with-search-expandable .nav-menu {
-    padding-left:56px;
+@media screen and (max-width: 600px) {
+  nav .nav-wrapper.with-search-expandable .nav-menu {
+    padding-left: 56px;
+  }
+  nav .nav-wrapper.with-search-expandable .nav-search-form {
+    height: 56px;
+  }
 }
-nav .nav-wrapper.with-search-expandable .nav-search-form {
-    height:56px;
-}
-}.navbar-fixed {
-    z-index:998;
+.navbar-fixed {
+  z-index: 998;
 }
