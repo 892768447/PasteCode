@@ -48,7 +48,7 @@ nav .nav-wrapper.with-search-expandable .input-field.search-expandable {
 
 nav .nav-wrapper.with-search-expandable .input-field.search-expandable input[type="search"] {
     color: white;
-    background: transparent;
+    background: rgba(255, 255, 255, 0.1);
 }
 
 nav .nav-wrapper.with-search-expandable .input-field.search-expandable input[type="search"]:focus~.close-button {
