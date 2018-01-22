@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <projectDescription>
-	<name>paste-code</name>
+	<name>PasteCode</name>
 	<comment></comment>
 	<projects>
 	</projects>
@@ -16,43 +16,7 @@
 	</natures>
 	<filteredResources>
 		<filter>
-			<id>0</id>
-			<name></name>
-			<type>26</type>
-			<matcher>
-				<id>org.eclipse.ui.ide.multiFilter</id>
-				<arguments>1.0-name-matches-false-false-node_modules</arguments>
-			</matcher>
-		</filter>
-		<filter>
-			<id>1515926130576</id>
-			<name></name>
-			<type>26</type>
-			<matcher>
-				<id>org.eclipse.ui.ide.multiFilter</id>
-				<arguments>1.0-name-matches-false-false-node_modules</arguments>
-			</matcher>
-		</filter>
-		<filter>
-			<id>1515930962877</id>
-			<name></name>
-			<type>26</type>
-			<matcher>
-				<id>org.eclipse.ui.ide.multiFilter</id>
-				<arguments>1.0-name-matches-false-false-node_modules</arguments>
-			</matcher>
-		</filter>
-		<filter>
-			<id>1515980779287</id>
-			<name></name>
-			<type>26</type>
-			<matcher>
-				<id>org.eclipse.ui.ide.multiFilter</id>
-				<arguments>1.0-name-matches-false-false-node_modules</arguments>
-			</matcher>
-		</filter>
-		<filter>
-			<id>1516351300776</id>
+			<id>1516602947667</id>
 			<name></name>
 			<type>26</type>
 			<matcher>
